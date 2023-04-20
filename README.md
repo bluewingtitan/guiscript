@@ -1,8 +1,7 @@
 # GuiScript
-> A developer friendly library for creating debug UI in Godot 4.
+> A developer friendly library for creating debug UI in Godot 4 (The UI for the debug menu below is created in 27 lines of code).
 
 ![image](https://user-images.githubusercontent.com/38633608/233499345-9e38a930-936f-42c8-8c26-ab8d4022dbc2.png)  
-> The UI for this debug menu is nothing more than 27 simple lines of code.
 
 You propably where there: You need a debug menu, maybe a few buttons, some number outputs in a simple layout. You start clicking it together in Godot, but it just takes far too much time for something you just need to do some testing and quick visualisations. GuiScript aims to solve this exact problem (but may also be used to prototype actual Game UI, even to build Game UI with the addition of some styling).
 
