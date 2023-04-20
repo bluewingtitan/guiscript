@@ -37,6 +37,7 @@ In general you shall follow these rules three:
 ## Snippets
 
 ### Basic Introduction
+![image](https://user-images.githubusercontent.com/38633608/233495675-065e264e-527a-492d-b0ec-7f15790a0f44.png)
 ```python
 func _process(_delta):
 	begin_ui()
@@ -58,6 +59,7 @@ func _process(_delta):
 ```
 
 ### Table
+![image](https://user-images.githubusercontent.com/38633608/233495614-293b2f73-f426-42fa-9f7c-7ed171f2d94f.png)
 ```python
 var table_data = [
 	[13, 37, 32, 40],
@@ -87,7 +89,7 @@ func _process(_delta):
 ```
 
 ### Cookie Clicker
-> Cookie Clicker in like 20 loc, without manually creating any UI.
+![image](https://user-images.githubusercontent.com/38633608/233495737-19d0da13-19d2-4892-90a9-39005bcb5685.png)
 ```python
 var clicks = 0.0
 var upgrade_cost = 5
