@@ -1,5 +1,5 @@
 # GuiScript
-> A developer friendly library for creating debug UI in Godot 4 (The UI for the debug menu below is created in 28 lines of code).
+> A developer friendly library for creating debug UI in Godot 4 (The UI for the debug menu below is created in 28 lines of easy code).
 
 ![image](https://user-images.githubusercontent.com/38633608/233499345-9e38a930-936f-42c8-8c26-ab8d4022dbc2.png)  
 
