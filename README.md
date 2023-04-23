@@ -16,7 +16,7 @@ The specific steps you shall follow are:
 
 0. Clone this repo AND it's submodules
 0. "Building the C++ bindings" in the documentation linked above
-0. (In the root dir of this repo) execute: `scons platform=<platform>` (add `target=template_release` if building for release; add `-jX`, but replacing X with the number of threads to use for building, e.g. -j6 for 6 threads). Build for debug and release for all platforms you plan on using. See [here](https://docs.godotengine.org/en/stable/contributing/development/compiling/index.html#toc-devel-compiling) for proper instructions on how to compile for each platform.
+0. (In the root dir of this repo) execute: `scons platform=<platform>` (add `target=template_release` if building for release; add `-jX`, but replacing X with the number of threads to use for building, e.g. -j6 for 6 threads). **Build for debug and release for all platforms you plan on using. See [here](https://docs.godotengine.org/en/stable/contributing/development/compiling/index.html#toc-devel-compiling) for proper instructions on how to compile for each platform.**
 
 After that, copy the 'bin'-folder (demo/bin) and guiscript.gdextension of the demo-project into your own project, and you are golden.
 
