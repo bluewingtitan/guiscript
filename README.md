@@ -8,7 +8,7 @@ You propably where there: You need a debug menu, maybe a few buttons, some numbe
 MIT License.
 
 ## Build
-For now, there are no releases, but building this from scratch is not that hard.
+For now, there are no releases (I'll eventually come around to set up CI/CD to build it properly), but building this from scratch is not that hard.
 
 This project makes heavy use of the example provided by the awesome people working on godot, so I'll link to the documentation: [GDExtension C++ Example](https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextension_cpp_example.html).
 
