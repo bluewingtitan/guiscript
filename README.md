@@ -61,6 +61,8 @@ func _process(_delta):
 ```
 
 ### Table
+> Procedural UI Generation ftw!
+
 ![image](https://user-images.githubusercontent.com/38633608/233495614-293b2f73-f426-42fa-9f7c-7ed171f2d94f.png)
 ```python
 var table_data = [
