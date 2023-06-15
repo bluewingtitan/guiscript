@@ -23,18 +23,21 @@ After that, copy the 'bin'-folder (demo/bin) and guiscript.gdextension of the de
 Open your project and check if you are able to see the class "GuiScript", deriving from Control in the "Add new node"-Screen.
 
 ## Usage
-Layout GuiScript like a proper UI-Component. Any UI it will generate will live inside it. It's size will limit the UI's size.
+Layout GuiScript like any other Container. Any UI it will generate will live inside it. It's size will limit the UI's size. You may put it into a scroll container to allow for additional space.
 
 Add a new script deriving from GuiScript and add it as script to your GuiScript-Node.
 
-What you want to do exaclty now depends on your goals. Look at the examples below to see all available UI-Elements in action. Alternatively, take a look into the demo project.
+What you want to do exactly now depends on your goals. Look at the examples below to see all available UI-Elements in action. Alternatively, take a look into the demo project.
 
 In general you shall follow these rules three:
 
 0. Whenever drawing a new frame, call begin_ui() first. This signals to guiscript, that a new frame has begun. Failing to do so will mean that new UI-Calls will add additional UI instead of updating it.
-0. For each *_box() you open, you shall call end_box() once. This signals where the box shall be closed again and is essential for proper layouting. Imagine it as a closing tag in html.
+0. For each *_box() you open, you shall call end_box() once. This signals where the box should be closed and is essential for proper layouting. Imagine it as a closing tag in html.
 0. Have fun and report bugs.
 
+# Contribution
+In general, contributions are 100% welcome. As this project is maintained by a pretty busy student, expect some time to pass from PR to feedback. This project is intended to be simple and minimalistic, so I'll only accept PRs with features that would be of use for the main use case of GUIScript.  
+That being said, feel free to develop own flavours of this, to use this as a base for something bigger. As long as you honor the license I'll honor your project :D
 
 ## Snippets
 
@@ -129,15 +132,10 @@ func _process(delta_time):
 	hseparator()
 ```
 
-# Contribution
-In general, contributions are welcome. As this project is maintained by a pretty busy student, expect some time to pass from PR to feedback. This project is intended to be simple and minimalistic, so only start working on something if you see most people using this also using your contribution.
-
-Feel free to develop own flavours of this, or to use this as a base for something bigger. As long as you honor the license, I'll honor your project :D
-
 # Inner Workings, Performance
 GuiScript is based on a virtual DOM. The elements of the virtual DOM manage their counterpart in the real Godot UI and encapsulate it's capabilities. If they are invalidated, they will remove the real UI-Node from the tree in godot.
 
-By using this system, the UI will only be rebuilt if a disruptive update is sent (one, that suddenly requires a completly different node at the same position, invalidating the old one), and will only rebuild the parts that are actually required to be rebuilt. If an update can be represented by simply updating an existing component, exactly that will be done. This makes GuiScript reasonably performant (but obviously not quite as performant as creating your own custom dev-menus).
+By using this system, the UI will only be rebuilt if a disruptive update is sent (one, that suddenly requires a completly different node at the same position, invalidating the old one), and will only rebuild the parts that are actually required to be rebuilt. If an update can be represented by simply updating an existing component, exactly that will be done. This makes GuiScript reasonably performant to be used for temporary, developement or debug UI.
 
 # Testing, Bugs and Further Developement
-GuiScript is an almost 1:1-Port of an Godot3 Engine Module with proper code coverage. The tests are yet to be ported. For testing this port, mostly practical testing was done. GuiScript is used in some game projects of mine to build quite big debug-ui-stuff, so I always got incentive to fix bugs and extend this project.
+GuiScript is an almost 1:1-Port of an Godot3 Engine Module with proper code coverage. The tests are yet to be ported. For testing this port, mostly practical testing was done. GuiScript is used in some game projects of mine to build extensive debug-ui-stuff, so bugs usually will be fixed very quickly.
